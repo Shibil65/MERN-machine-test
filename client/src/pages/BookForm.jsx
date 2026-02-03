@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "./BookForm.css"; 
 
 function BookForm() {
   const [title, setTitle] = useState("");
@@ -28,59 +28,60 @@ function BookForm() {
   };
 
   return (
-    <div className="container mt-5">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <div className="card shadow">
-            <div className="card-body">
-              <h2 className="card-title text-center mb-4">Add Book</h2>
+    <div className="bookform-container d-flex align-items-center justify-content-center min-vh-100">
+      <div className="card shadow-lg p-4 rounded-4 border-0 w-100" style={{ maxWidth: "450px" }}>
+        <h2 className="text-center mb-4 text-gradient">Add New Book</h2>
 
-              {success && (
-                <div className="alert alert-success text-center">
-                  {success}
-                </div>
-              )}
+        {success && (
+          <div className="alert alert-success text-center py-2 success-msg">
+            {success}
+          </div>
+        )}
 
-              <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Book Title"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                    required
-                  />
-                </div>
+        <form onSubmit={handleSubmit}>
+          <div className="form-floating mb-3">
+            <input
+              type="text"
+              className="form-control input-custom"
+              id="titleInput"
+              placeholder="Book Title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              required
+            />
+            <label htmlFor="titleInput">Book Title</label>
+          </div>
 
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Author"
-                    value={author}
-                    onChange={(e) => setAuthor(e.target.value)}
-                    required
-                  />
-                </div>
+          <div className="form-floating mb-3">
+            <input
+              type="text"
+              className="form-control input-custom"
+              id="authorInput"
+              placeholder="Author"
+              value={author}
+              onChange={(e) => setAuthor(e.target.value)}
+              required
+            />
+            <label htmlFor="authorInput">Author</label>
+          </div>
 
-                <div className="mb-3">
-                  <input
-                    type="date"
-                    className="form-control"
-                    value={publishedDate}
-                    onChange={(e) => setPublishedDate(e.target.value)}
-                    required
-                  />
-                </div>
+          <div className="form-floating mb-4">
+            <input
+              type="date"
+              className="form-control input-custom"
+              id="dateInput"
+              placeholder="Published Date"
+              value={publishedDate}
+              onChange={(e) => setPublishedDate(e.target.value)}
+              required
+            />
+            <label htmlFor="dateInput">Published Date</label>
+          </div>
 
-                <button type="submit" className="btn btn-primary w-100">
-                  Add Book
-                </button>
-              </form>
-            </div>
-          </div> 
-        </div>
+          <button type="submit" className="btn btn-gradient w-100 btn-lg">
+            Add Book
+          </button>
+        </form>
       </div>
     </div>
   );

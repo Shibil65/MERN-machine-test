@@ -1,0 +1,47 @@
+.bookform-container {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+
+.text-gradient {
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+
+.input-custom {
+  border-radius: 12px;
+  padding: 1rem 0.75rem;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.input-custom:focus {
+  border-color: #ff6a00;
+  box-shadow: 0 0 8px rgba(255, 106, 0, 0.3);
+}
+
+
+.success-msg {
+  background-color: rgba(46, 204, 113, 0.2);
+  color: #27ae60;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+
+.btn-gradient {
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(238, 9, 121, 0.4);
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(238, 9, 121, 0.5);
+}
