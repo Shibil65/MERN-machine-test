@@ -79,7 +79,7 @@ function BookForm() {
                 </button>
               </form>
             </div>
-          </div>
+          </div> 
         </div>
       </div>
     </div>

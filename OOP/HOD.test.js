@@ -8,4 +8,4 @@ test('HOD info formatting works correctly', () => {
 
   expect(hod.info()).toBe('Student: Alice\nHOD: Rahul\nCollege: MES'
 );
-});
+}); 

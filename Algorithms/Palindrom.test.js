@@ -11,7 +11,7 @@ test('-121 is not a palindrome', () => {
 test('10 is not a palindrome', () => {
   expect(isPalindromeNumber(10)).toBe(false);
 });
-
+ 
 test('0 is a palindrome', () => {
   expect(isPalindromeNumber(0)).toBe(true);
 });

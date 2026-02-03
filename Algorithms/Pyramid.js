@@ -12,5 +12,5 @@ function Pyramid(n) {
     console.log(row.trim());
   }
 }
-
+ 
 Pyramid(5);

@@ -26,7 +26,7 @@ class HOD extends Student {
   info() {
     return `Student: ${this.studentName}\nHOD: ${this.hodName}\nCollege: ${this.collegeName}`;
   }
-}
+} 
 
 
 if (require.main === module) {

@@ -11,7 +11,7 @@ function Palindrome(x) {
 
   return orig === rev;
 }
-
+ 
 module.exports = Palindrome;
 
 
